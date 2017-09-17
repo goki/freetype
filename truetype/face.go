@@ -491,7 +491,7 @@ func (a *face) drawContour(ps []Point, dx, dy fixed.Int26_6) {
 	if a.stroke == 0 {
 		a.r.AddPath(path)
 	} else {
-		a.r.AddStroke(path, a.stroke, raster.RoundCapper, raster.RoundJoiner)
+		a.r.AddStroke(path, a.stroke, raster.ButtCapper, raster.RoundJoiner)
 	}
 }
 
